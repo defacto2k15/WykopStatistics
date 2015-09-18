@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CategoriesFromFileFactory.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CategoriesFromFileFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Characteristics/DiggsByDayCounter.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Characteristics/DiggsByDayCounter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Characteristics/DiggsCharacteristicsAcumulator.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Characteristics/DiggsCharacteristicsAcumulator.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ICharacteristicsFetcher.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ICharacteristicsFetcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NodesFromXmlFileFetcher.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NodesFromXmlFileFetcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OneDigg.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OneDigg.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OneDiggFromXPathNodeFactory.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OneDiggFromXPathNodeFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ToCsvExporter.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ToCsvExporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategory.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategoryWithLambda.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategoryWithLambda.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategoryWithKeywords.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TopicCategoryWithKeywords.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ValuesFromNodeExtractor.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ValuesFromNodeExtractor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pugixml.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pugixml.hpp" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/cilk" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/objc" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/sanitizer" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/cilk" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/objc" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.9/include/sanitizer" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
