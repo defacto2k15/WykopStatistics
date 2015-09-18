@@ -6,8 +6,8 @@ Napisany w c++ i bashu, z użyciem biblioteki pugi do obsługi xml
 
 Jak używać:
 
-Aby otrzymać statystyki dotyczące znalezisk na głównej przede wszystkim potrzeba pliku xml opisującego te znaleziska. Można go ściągnąć z internetu, link: LINK, anbo też samemu wygenerować. 
-Generowanie pliku ze znaleziskami. W przypadku jak nie chce ci się generować przejdź do punktu 2.
+Aby otrzymać statystyki dotyczące znalezisk na głównej przede wszystkim potrzeba pliku xml opisującego te znaleziska. Można go ściągnąć z internetu, link: http://www.filedropper.com/outxml_1 , albo też samemu wygenerować. 
+W przypadku jak nie chce ci się generować przejdź do punktu 2.
 
 1) Tworzenie pliku ze znaleziskami
 Potrzebne: linux ze standardowymi programami typu cd, sed, ...
