@@ -38,7 +38,7 @@ e) Należy usunąć z pliku słowa "komentarz" "komentarze" "komentarzy". Robimy
 	./scripts/scriptNormalizingXmlValues.sh $1 gdzie
 	$1 to nazwa pliku z opisem znalezisk (outXml.xml)
 
-2) Tworzenie pliku csv ze danymi statystycznymi
+2) Tworzenie pliku csv ze danymi statystycznymi.
 a) Należy skompilować program WykopMainDataAlanyzer
 cd WykopMainDataAlanyzer/build
 cmake ../
