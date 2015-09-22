@@ -1,1 +1,0 @@
-/home/defacto/ProgrammingProjects/WykopProject/gitRepo/WykopMainDataAlanyzer/build/CMakeFiles/WykopMainDataAlanyzer.dir
