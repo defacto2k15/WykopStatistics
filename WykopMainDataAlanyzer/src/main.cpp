@@ -19,16 +19,12 @@
 static const int MinimalDiggsNumber = 55;
 
 void RemoveSponsoredDiggs(std::vector<OneDigg> &vector);
-
-
 std::map< DayName, std::map< Characteristic, CharacteristicValue > > getCharacteristicsByDayMap(
 			std::vector<std::shared_ptr<TopicCategory>> topicCategories,
            	std::map< Characteristic, std::function<CharacteristicValue (OneDigg&)> > countingMethodByCharacteristicMap,
 			std::vector<OneDigg> diggsOnMainVector );
 
 void RemoveDuplicateDiggs(std::vector<OneDigg> &vec);
-
-
 std::unique_ptr<pugi::xml_document> openXmlDocument(const std::string &pathToXmlDoc);
 
 void checkArguments(int argc);
@@ -56,11 +52,6 @@ int main(int argc, const char **argv) {
 
 	CategoriesFromFileFactory categoriesFactory( std::move( categoriesDoc));
 
-//	std::shared_ptr<TopicCategory> arabCategory (new TopicCategoryWithKeywords (	std::vector<std::string>
-//       { "imigran", "islam", "muzułum", "meczet", "uchodźc", "arab", "isis", "dżihad",
-//		"uchodź", "imam", "religia pokoju" ,"mahomet", "kozojebc"}, "Islam"));
-//
-//	std::shared_ptr<TopicCategory> allDiggsCategory( new TopicCategoryWithLambda([](OneDigg& ){return true;}, "AllDiggs"));
 
 	std::vector<std::shared_ptr<TopicCategory>> topicCategories = categoriesFactory.getCategories();//{arabCategory,  allDiggsCategory};
 
@@ -81,7 +72,7 @@ int main(int argc, const char **argv) {
 void checkArguments(int argc) {
 	if( argc != 4){
 		std::cout << "Wrong number of arguments " << std::endl;
-		std::cout << "Usage: inputXml categoriesXml outputCsv " << std::endl;
+		std::cout << "Usage: WykopMainDataAnalyzer inputXml categoriesXml outputCsv " << std::endl;
 		std::exit(-1);
 	}
 }
