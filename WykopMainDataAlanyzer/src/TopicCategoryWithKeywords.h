@@ -7,10 +7,11 @@
 #include "TopicCategory.h"
 
 class TopicCategoryWithKeywords : public TopicCategory {
-
+private:
+	std::vector<std::string> keywords;
 public:
 	TopicCategoryWithKeywords(const std::vector<std::string> keywordsVec, const std::string &TopicName)
-			: keywords(keywordsVec), TopicCategory(TopicName)
+			:  TopicCategory(TopicName), keywords(keywordsVec)
 				{ }
 
 	virtual bool isDiggOfTopic(OneDigg &digg){
@@ -24,8 +25,6 @@ public:
 	}
 
 private:
-	std::vector<std::string> keywords;
-
 	bool findStringIC(const std::string & strHaystack, const std::string & strNeedle)
 	{
 		auto it = std::search(

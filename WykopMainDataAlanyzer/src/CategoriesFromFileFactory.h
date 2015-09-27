@@ -16,6 +16,7 @@
 #include "TopicCategoryWithKeywords.h"
 #include <memory>
 #include <boost/algorithm/string.hpp>
+#include <constantElements/CharacteristicFileConstants.h>
 
 class CategoriesFromFileFactory {
 	std::unique_ptr<pugi::xml_document> categoriesDoc;
@@ -28,7 +29,9 @@ public:
 		std::vector<std::shared_ptr<TopicCategory>> outVec;
 
 		NodesFromXmlFileFetcher fetcher(std::move(categoriesDoc));
-		std::vector<pugi::xpath_node> nodes = fetcher.fetchNodes("/categories/category");
+		std::vector<pugi::xpath_node> nodes = fetcher.fetchNodes((
+				CharacteristicFileConstants::getRootNodeName() + "/" +
+				CharacteristicFileConstants::getCategoryNodeName()).c_str());
 
 		for( auto &oneCategoryNode : nodes){
 			outVec.push_back(CreateOneCategory(oneCategoryNode));
@@ -38,9 +41,9 @@ public:
 private:
 	std::shared_ptr<TopicCategory> CreateOneCategory(const pugi::xpath_node oneCategoryNode) const {
 		ValuesFromNodeExtractor extractor;
-		auto categoryName = extractor.getValueFromNode(oneCategoryNode, "name/text()");
+		auto categoryName = extractor.getValueFromNode(oneCategoryNode, (CharacteristicFileConstants::getCategoryNameNodeName()+"/text()").c_str());
 		boost::algorithm::trim(categoryName);
-		auto keywordsAsOneString = extractor.getValueFromNode(oneCategoryNode, "keywords/text()");
+		auto keywordsAsOneString = extractor.getValueFromNode(oneCategoryNode, (CharacteristicFileConstants::getCategoryKeywordsNodeName()+"/text()").c_str());
 		if(  keywordsAsOneString == ""){
 			return std::shared_ptr<TopicCategory>( new TopicCategoryWithLambda([](OneDigg& ){return true;}, categoryName ));
 		} else {

@@ -14,7 +14,6 @@ class OneDiggFromXPathNodeFactory {
 public:
 	OneDigg createDigg(pugi::xpath_node &node);
 
-
 	std::string fetchDate(const pugi::xpath_node &node, ValuesFromNodeExtractor &extractor) const;
 
 	int getDiggsCount(const pugi::xpath_node &node, ValuesFromNodeExtractor &extractor) const;

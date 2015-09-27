@@ -1,0 +1,8 @@
+//
+// Created by defacto on 24.09.15.
+//
+
+#ifndef WYKOPMAINDATAALANYZER_WYKOPMAINDATAANALYZER_H
+#define WYKOPMAINDATAALANYZER_WYKOPMAINDATAANALYZER_H
+int wykopMainDataAnalyzerMain(int argc, const char **argv);
+#endif //WYKOPMAINDATAALANYZER_WYKOPMAINDATAANALYZER_H
