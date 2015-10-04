@@ -15,7 +15,7 @@ private:
 	static constexpr char const * diggNameNodeName = "title";
 	static constexpr char const * diggDescriptionNodeName = "description";
 	static constexpr char const * diggTimeNodeName = "time";
-	static constexpr char const * diggCountNodeName = "diggCount";
+	static constexpr char const * diggCountNodeName = "oneDiggCount";
 public:
 	static std::string getRootNodeName();
 

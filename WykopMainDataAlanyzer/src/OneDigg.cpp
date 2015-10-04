@@ -19,3 +19,11 @@ int OneDigg::getDiggCount() const {
 const std::string OneDigg::getAddDate() const {
 	return addDate;
 }
+
+const std::string OneDigg::getTime() const {
+	return time;
+}
+
+const std::string OneDigg::getAddDateWithTime() const {
+	return getAddDate()+" "+getTime();
+}

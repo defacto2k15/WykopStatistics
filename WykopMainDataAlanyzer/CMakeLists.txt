@@ -4,14 +4,14 @@ project(WykopMainDataAlanyzer)
 FIND_PACKAGE( Boost 1.40 COMPONENTS program_options REQUIRED )
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
-add_definitions(-std=c++11)
+add_definitions(-std=c++14)
 # Extra warnings
 add_definitions(-Wextra -Wall)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build/")
 
 file(GLOB SRC_FILES "src/*.cpp" "src/Characteristics/*.cpp" "src/constantElements/*.cpp")
-add_executable(WykopMainDataAlanyzer ${SRC_FILES} src/constantElements/InputFileConstants.cpp src/constantElements/InputFileConstants.h src/WykopMainDataAnalyzer.cpp src/WykopMainDataAnalyzer.h)
+add_executable(WykopMainDataAlanyzer ${SRC_FILES}  )
 TARGET_LINK_LIBRARIES( WykopMainDataAlanyzer ${Boost_LIBRARIES} )
 
 # we may or may not want to build tests
@@ -26,7 +26,8 @@ if(BuildTests)
 
     set(TEST_EXECUTABLE_NAME "tests")
     # Test files
-    file(GLOB TEST_FILES "test/*.cpp" "test/help/*.cpp" "test/endToEndHelp/*.cpp" "test/endToEndHelp/*.h" "test/help/*.cpp"  "test/help/*.h" )
+    file(GLOB TEST_FILES "test/*.cpp" "test/help/*.cpp" "test/endToEndHelp/*.cpp"
+            "test/endToEndHelp/*.h" "test/help/*.cpp"  "test/help/*.h"  "test/endToEndHelp/diggCharacteristics/*.cpp" "test/endToEndHelp/diggCharacteristics/*.h" )
 
     # Don't include Main.cpp from src
     file(GLOB MAIN_SRC "src/main.cpp")

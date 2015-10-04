@@ -14,6 +14,7 @@ OneDigg OneDiggFromXPathNodeFactory::createDigg(pugi::xpath_node &node) {
 	int diggsCount = getDiggsCount(node, extractor);
 
 	std::string date = fetchDate(node, extractor);
+	std::string time = fetchTime(node, extractor);
 	std::string dateWithTime = extractor.getValueFromNode(node, (InputFileConstants::getDiggTimeNodeName()+"/text()").c_str());
 	return OneDigg(title, description, diggsCount, date, dateWithTime);
 }
@@ -36,4 +37,15 @@ std::string OneDiggFromXPathNodeFactory::fetchDate(const pugi::xpath_node &node,
 	std::string date;
 	ss >> date;
 	return date;
+}
+
+std::string OneDiggFromXPathNodeFactory::fetchTime(pugi::xpath_node &node, ValuesFromNodeExtractor extractor) {
+	auto dateWithHour = extractor.getValueFromNode(node, (InputFileConstants::getDiggTimeNodeName()+"/text()").c_str());
+	std::stringstream ss;
+	ss << dateWithHour;
+	std::string date;
+	ss >> date;
+	std::string time;
+	ss >> time;
+	return time;
 }

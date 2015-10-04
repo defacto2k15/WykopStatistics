@@ -9,31 +9,29 @@
 #include <pugixml.hpp>
 #include <CommonTypes.h>
 #include <map>
+#include <vector>
+#include "OneDigg.h"
 
 class InputXmlCreator {
 	pugi::xml_document doc;
-	int minimalDiggsNumber_ = 0;
 	std::map<DayName, int> amountByDatesMap_;
 public:
 	InputXmlCreator()= default;
-	InputXmlCreator &createDiggsWithRandomInfo();
-	InputXmlCreator &AmountByDays(std::map<DayName, int> &amountByDatesMap);
-	InputXmlCreator &WithMinimialDiggsNumber(int minimalDiggsNumber);
-	void Create();
+
 	void writeToFile(const char *filePath);
 
-private:
-	pugi::xml_node getRootNode();
-	pugi::xml_node addRandomDataToDigg(pugi::xml_node node);
+	void createWithDiggs(std::vector<OneDigg> diggsVector);
 
-	void setDate(pugi::xml_node &node, const DayName time);
+private:
 	pugi::xml_node addDiggToXmlDoc(const char *node);
 
-	void addValueNode(pugi::xml_node node, std::string nodeName, std::string nodeValue);
+	void addValueNode(pugi::xml_node &node, std::string nodeName, std::string nodeValue);
 
-	std::string createRandomHourString();
+	void fillNodeWithData(pugi::xml_node &node, OneDigg &digg);
 
-	std::string createRandomDiggsNumber();
+	void addRootNode();
+
+	pugi::xml_node getRootNode();
 };
 
 

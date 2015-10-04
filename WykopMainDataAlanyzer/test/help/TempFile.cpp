@@ -28,11 +28,16 @@ void test::TempFile::createNewFile() {
 	fstream fs;
 	fs.open(this->path.c_str(), ios::out);
 	fs.close();
-	std::cout << "FILE IS " << path << std::endl;
 }
 
 test::TempFile::~TempFile() {
-//	if( remove( this->path ) != 0 ){
-//		cerr << "Error while removing file with path " << this->path << endl;
-//	}
+	if( remove( this->path.c_str() ) != 0 ){
+		cerr << "Error while removing file with path " << this->path << endl;
+	}
+}
+
+void test::TempFile::clearFileContent() {
+	std::ofstream ofs;
+	ofs.open(getPath(), std::ofstream::out | std::ofstream::trunc);
+	ofs.close();
 }

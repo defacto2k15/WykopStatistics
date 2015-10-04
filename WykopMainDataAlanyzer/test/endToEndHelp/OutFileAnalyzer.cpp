@@ -18,6 +18,7 @@ unsigned long OutFileAnalyzer::getRowNumber() {
 
 
 bool OutFileAnalyzer::containsRowWithValues(std::vector<std::pair<std::string, std::string>> columnNameValuePairs) {
+	makeSureDataIsLoaded();
 	auto it = std::find_if(begin(rowsVector_), end(rowsVector_), [&columnNameValuePairs, this]
 			(std::vector<std::string>& rowValues){
 				for( auto &pair : columnNameValuePairs ){

@@ -7998,7 +7998,7 @@ EOF
 	# Done checking deplibs!
 	deplibs=$newdeplibs
       fi
-      # Time to change all our "foo.ltframework" stuff back to "-framework foo"
+      # time to change all our "foo.ltframework" stuff back to "-framework foo"
       case $host in
 	*-*-darwin*)
 	  newdeplibs=`$ECHO " $newdeplibs" | $SED 's% \([^ $]*\).ltframework% -framework \1%g'`
@@ -8731,7 +8731,7 @@ EOF
 	    ;;
 	  esac
 	fi
-	# Time to change all our "foo.ltframework" stuff back to "-framework foo"
+	# time to change all our "foo.ltframework" stuff back to "-framework foo"
 	compile_deplibs=`$ECHO " $compile_deplibs" | $SED 's% \([^ $]*\).ltframework% -framework \1%g'`
 	finalize_deplibs=`$ECHO " $finalize_deplibs" | $SED 's% \([^ $]*\).ltframework% -framework \1%g'`
 	;;

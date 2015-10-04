@@ -16,6 +16,7 @@ namespace test {
 		TempFile(const char *fileExtension = "") : extension_(fileExtension){};
 		const char * getPath();
 		void createNewFile();
+		void clearFileContent();
 		~TempFile();
 
 		TempFile (const TempFile& other) = delete;

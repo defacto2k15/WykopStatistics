@@ -20,6 +20,7 @@ public:
 	void assertContainsRowWithValues(std::vector <std::pair<std::string, std::string>> expectedColumnValuePairs);
 
 	void assertContainsColumns(std::vector<std::string> expectedColumnsNames);
+
 };
 
 

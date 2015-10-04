@@ -22,8 +22,8 @@ public:
 
 	bool containsColumns(std::vector<std::string> columnNames);
 
-private:
 	void loadDataFromFile();
+private:
 	void makeSureDataIsLoaded();
 
 	void setColumnNamesVector(std::vector<std::vector<std::string>> rowsVector);

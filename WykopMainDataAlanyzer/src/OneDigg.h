@@ -13,12 +13,12 @@ private:
 	std::string description;
 	int diggCount;
     std::string addDate;
-	std::string addDateWithTime;
+	std::string time;
 public:
 	OneDigg(const std::string &title, const std::string &description, int diggCount,
-	        const std::string &addDate, const std::string &addDateWithTime) :
+	        const std::string &addDate, const std::string &time) :
 			title(title), description(description), diggCount(diggCount),
-	                                                 addDate(addDate), addDateWithTime(addDateWithTime) { }
+	                                                 addDate(addDate), time(time) { }
 
 	const std::string getTitle() const;
 
@@ -28,9 +28,9 @@ public:
 
 	const std::string getAddDate() const;
 
-	const std::string &getAddDateWithTime() const {
-		return addDateWithTime;
-	}
+	const std::string getTime() const;
+
+	const std::string getAddDateWithTime() const;
 };
 
 
